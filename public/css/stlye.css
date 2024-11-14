@@ -1,0 +1,226 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+  
+
+  
+
+/* Wrapper for the image to ensure it takes full height */
+.image-wrapper {
+    position: relative;
+    height: 100%;
+  }
+  
+  /* Card styling for desktop/laptop view */
+  .custom-card {
+    position: absolute;
+    top: 50%;  /* Centers the card vertically */
+    right: 3%; /* Pushes the card to overlap the image slightly */
+    /* transform: translate(30%, 50%); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 80%; /* Adjust card width for better layout */
+  }
+  
+  /* Mobile view adjustments */
+  @media (max-width: 576px) {
+    .card-container {
+      position: relative;
+      margin-top: -30px; /* Negative margin to overlay image a bit from below */
+    }
+  
+    .custom-card {
+      position: center;  /* Disables absolute positioning */
+      transform: none;
+      width: 100%; /* Ensures card spans full width */
+      box-shadow: none; /* Removes shadow for a clean mobile look */
+      margin-top: -20px; /* Overlay image from below */
+    }
+  
+    .image-wrapper img {
+      width: 100%;  /* Ensures image fits screen on mobile */
+      height: auto;
+    }
+  }
+  
+
+    /* Media query for laptop/desktop view (min-width: 992px) */
+    @media (min-width: 992px) {
+        .custom-card {
+        position: absolute;
+        top: 50%;     /* Vertically center the card */
+        left: 60%;    /* Push it to the right side */
+        transform: translate(85%, -50%);
+        }
+    }
+
+
+
+
+
+
+
+
+.section{
+    padding: 30px 0px;
+}
+
+p {
+    color: #9F9CA8;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 100px;
+    font-size: 250px;
+}
+
+/* General styles for text */
+.main-heading {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.description {
+    font-size: 18px;
+}
+
+
+.custom-card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+
+ /* Ensure carousel items display correctly */
+.carousel-item {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    width: 100%;
+}
+
+.card {
+    box-shadow: none;
+    transition: box-shadow 0.7s ease;
+}
+  
+.card:hover {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.carousel-item {
+display: flex;
+}
+  
+.carousel-inner .carousel-item {
+justify-content: center;
+}
+  
+/* image  */
+.image-wrappe {
+    padding: 0px; /* Adds spacing around the image */
+    border-radius: 10px; /* Softens the corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Creates a subtle shadow */
+    background-color: #fff; /* Adds a white background behind the image */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds hover effects */
+}
+
+.image-wrapper img {
+    width: 100%; /* Ensures the image takes up full width of the wrapper */
+    border-radius: 10px; /* Matches the border radius of the wrapper */
+}
+
+.image-wrapper:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+}
+
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    border-radius: 10px; /* Optional: to soften edges of the image */
+}
+
+.card-container {
+    /* Position it absolutely relative to the image wrapper */
+    
+    top: 30%; /* Position it at the middle vertically */
+    right: 100%; /* Position it to the right */
+    transform: translateY(-50%); /* Center it vertically */
+    max-width: 400px; /* Set a maximum width for the card */
+    z-index: 0; /* Make sure the card is above the image */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card-container {
+        /* position: relative;  */
+        /* Change to absolute for mobile */
+        bottom: 0; /* Position it at the bottom */
+        left: 0; /* Align it to the left */
+        width: 100%; /* Take full width */
+        /* transform: translateY(0); */
+         /* Reset the vertical transform */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For smaller screen sizes (e.g., mobile) */
+@media (max-width: 576px) {
+    .main-heading {
+        margin-top: 7%;
+        font-size: 35px; /* Reduce text size */
+        text-align: center; /* Center text */
+        font-weight: bolder;
+    }
+
+    .description {
+        font-size: 26px; /* Reduce text size */
+        text-align: center; /* Center description */
+    }
+
+    .text-container {
+        text-align: center; /* Center the entire text block */
+    }
+}
+
+/* For laptop view (e.g., larger than 992px) */
+@media (min-width: 992px) {
+    .main-heading {
+        font-size: 60px; /* Adjust the text size for laptop */
+        text-align: left; /* Left align on larger screens */
+    }
+
+    .description {
+        font-size: 25px; /* Slightly larger paragraph text */
+        text-align: left;
+    }
+}
